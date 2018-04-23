@@ -1,4 +1,4 @@
-/* @media (max-width: 900px) and (min-width: 768px) and (max-height: 1440px) and (min-height: 1024){ */
+@media (max-width: 900px) and (min-width: 768px) and (max-height: 1440px) and (min-height: 1024){
 
 
 canvas {
@@ -49,6 +49,7 @@ body.page-two{
 #pagetwo {
     background-color: red;
 }
+
 body {
     overflow: hidden;
 }
@@ -246,4 +247,6 @@ a:hover{
 
 .contact:hover{
   cursor: pointer;
+}
+
 }
