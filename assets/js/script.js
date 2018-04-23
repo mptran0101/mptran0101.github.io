@@ -31,7 +31,7 @@ $(document).ready(function() {
   }, 6000);
 
   audio.volume = 0.5;
-  audio_2.volume = 0.5;
+
 
   //JQuery function #2
   $('#speech_li').hover(function(){$(this).toggleClass('speech_color');});
@@ -71,6 +71,7 @@ $(document).ready(function() {
       $("#music_off").show();
     } else {
       audio.play();
+      audio.volume = 0.5;
       music_toggle = true
       $("#music").show();
       $("#music_off").css("display", "none");
@@ -87,6 +88,7 @@ $(document).ready(function() {
     } else {
       audio_2.play();
       music_toggle = true
+      audio_2.volume = 0.5;
       $("#music").show();
       $("#music_off").css("display", "none");
     }
