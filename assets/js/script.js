@@ -30,6 +30,9 @@ $(document).ready(function() {
     audio.play();
   }, 6000);
 
+  audio.volume = 0.5;
+  audio_2.volume = 0.5;
+
   //JQuery function #2
   $('#speech_li').hover(function(){$(this).toggleClass('speech_color');});
   $('#music_li').hover(function(){$(this).toggleClass('speech_color');});

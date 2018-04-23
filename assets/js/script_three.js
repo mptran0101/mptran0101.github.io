@@ -24,6 +24,35 @@
 
   var starField = new THREE.Points( starsGeometry, starsMaterial );
 
+  // cmera
+  // var mouse = {x:0,y:0};
+  // var cameraMoves = {x:0,y:0,z:-0.1,move:false,speed:0.2};
+  //
+  // function mouseMove(e){
+  //
+  // camera.position.x += Math.max(Math.min((e.clientX - mouse.x) * 0.01, cameraMoves.speed), -cameraMoves.speed);
+  // camera.position.y += Math.max(Math.min((mouse.y - e.clientY) * 0.01, cameraMoves.speed), -cameraMoves.speed);
+  //
+  //     mouse.x = e.clientX;
+  //     mouse.y = e.clientY;
+  //
+  // }
+  // window.addEventListener('mousemove', mouseMove);
+
+  function initTrackball(camera, rotate, zoom, pan, damping) {
+    var controls = new THREE.TrackballControls(camera);
+    controls.rotateSpeed = rotate || 1.0;
+    controls.zoomSpeed = zoom || 1.2;
+    controls.panSpeed = pan || 0.8;
+    controls.noZoom = true;
+    controls.noPan = false;
+    controls.staticMoving = true;
+    controls.dynamicDampingFactor = damping || 0.3;
+    return controls;
+}
+
+  controls = initTrackball(camera, 0.8);
+
   scene.add( starField );
 
 
@@ -37,6 +66,8 @@
 
   starField.rotation.x += 0.001;
   starField.rotation.y += 0.001;
+
+  controls.update(camera);
 
   renderer.render(scene, camera);
   renderer.setClearColor( 0xffffff, 0 );
