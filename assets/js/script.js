@@ -1,8 +1,6 @@
 $(document).ready(function() {
 
-//JavaScript function #1 is in script_three.js
-//JavaScript function #2-#6 is in script.js
-
+  //JQuery function #1
   $("#loading-wall").delay(6000).fadeOut(100);
   $("#loading-gif").delay(5800).fadeOut(1);
 
@@ -51,7 +49,9 @@ $(document).ready(function() {
   $("#speech_li").on('click',function(){
     if(speech_switch==false) {
       speech_switch = true
+      //JQuery function #4
       $("#music_2_off").css("display", "none");
+      //JQuery function #5
       $("#music_1").show();
     } else {
       speech_switch = false
@@ -91,7 +91,7 @@ $(document).ready(function() {
 
   function myLoop () {
     setTimeout(function () {
-      //JQuery function #4, #5, and #6
+      //JQuery function #6, and #7
       console.log(loopText[i]);
       if(speech_switch == true) {
         responsiveVoice.speak(loopText[i % arraylength], "UK English Female", {rate: 1.5});
