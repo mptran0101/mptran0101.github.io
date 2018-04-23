@@ -60,17 +60,17 @@ $(document).ready(function() {
     }
   });
 
-  $(".speech-click").on('click',function(){
-    if(speech_switch==false) {
-      speech_switch = true
-      $("#music_2_off").css("display", "none");
-      $("#music_1").show();
-    } else {
-      speech_switch = false
-      $("#music_2_off").show();
-      $("#music_1").css("display", "none");
-    }
-  });
+  // $(".speech-click").on('click',function(){
+  //   if(speech_switch==false) {
+  //     speech_switch = true
+  //     $("#music_2_off").css("display", "none");
+  //     $("#music_1").show();
+  //   } else {
+  //     speech_switch = false
+  //     $("#music_2_off").show();
+  //     $("#music_1").css("display", "none");
+  //   }
+  // });
 
   $("#music_li").on('click',function(){
     if(music_toggle==true) {
@@ -86,19 +86,19 @@ $(document).ready(function() {
     }
   });
 
-  $(".music-click").on('click',function(){
-    if(music_toggle==true) {
-      audio.pause();
-      music_toggle = false
-      $("#music").css("display", "none");
-      $("#music_off").show();
-    } else {
-      audio.play();
-      music_toggle = true
-      $("#music").show();
-      $("#music_off").css("display", "none");
-    }
-  });
+  // $(".music-click").on('click',function(){
+  //   if(music_toggle==true) {
+  //     audio.pause();
+  //     music_toggle = false
+  //     $("#music").css("display", "none");
+  //     $("#music_off").show();
+  //   } else {
+  //     audio.play();
+  //     music_toggle = true
+  //     $("#music").show();
+  //     $("#music_off").css("display", "none");
+  //   }
+  // });
 
   $("#music_li_2").on('click',function(){
     if(music_toggle==true) {
