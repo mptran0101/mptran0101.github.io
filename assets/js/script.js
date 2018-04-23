@@ -76,6 +76,10 @@ $(document).ready(function() {
     }
   });
 
+  setTimeout(function(){
+    audio_2.play();
+    audio_2.volume = 0.5;
+  }, 1);
 
   $("#music_li_2").on('click',function(){
     if(music_toggle==true) {
@@ -85,8 +89,8 @@ $(document).ready(function() {
       $("#music_off").show();
     } else {
       audio_2.play();
-      music_toggle = true
       audio_2.volume = 0.5;
+      music_toggle = true
       $("#music").show();
       $("#music_off").css("display", "none");
     }
