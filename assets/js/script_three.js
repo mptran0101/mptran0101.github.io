@@ -53,6 +53,7 @@
 
   controls = initTrackball(camera, 0.8);
 
+
   scene.add( starField );
 
 
