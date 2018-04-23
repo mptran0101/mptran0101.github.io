@@ -28,10 +28,8 @@ $(document).ready(function() {
 
   setTimeout(function(){
     audio.play();
+    audio.volume = 0.5;
   }, 6000);
-
-  audio.volume = 0.5;
-
 
   //JQuery function #2
   $('#speech_li').hover(function(){$(this).toggleClass('speech_color');});
