@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
   //JQuery function #1
-  $("#loading-wall").delay(6000).fadeOut(100);
-  $("#loading-gif").delay(5800).fadeOut(1);
+  $("#loading-wall").delay(2000).fadeOut(100);
+  $("#loading-gif").delay(1800).fadeOut(1);
 
   let loopText= ["Don't", "Become", "Attached", "Cause", "Then", "You",
     "Disconnect", "And", "Once", "You", "Gather", "Stress", "You'll", "Be",
@@ -29,7 +29,7 @@ $(document).ready(function() {
   setTimeout(function(){
     audio.play();
     audio.volume = 0.5;
-  }, 6000);
+  }, 2000);
 
   //JQuery function #2
   $('#speech_li').hover(function(){$(this).toggleClass('speech_color');});
